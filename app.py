@@ -4,7 +4,7 @@ from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
-from auth.auth import requires_auth
+from auth.auth import requires_auth, AuthError
 
 from database.models import setup_db
 from database.models import Author
@@ -325,6 +325,15 @@ def create_app(test_config=None):
           "error": 500,
           "message": "Internal Server Error"
       }), 500
+
+  @app.errorhandler(AuthError)
+  def auth_error(error):
+    print(error)
+    return jsonify({
+        "success": False,
+        "error": error.status_code,
+        "message": error.error.get('description')
+    }), error.status_code
 
   return app
 
