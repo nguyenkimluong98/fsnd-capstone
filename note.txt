@@ -1,0 +1,1 @@
+psql -h bookstore.c4bq3uuqrub9.us-east-1.rds.amazonaws.com -U postgres bookstore < bookstore.psql

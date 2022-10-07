@@ -42,7 +42,7 @@ def create_app(test_config=None):
 
   @app.route('/authors', methods=['GET'])
   @requires_auth("get:authors")
-  def get_authors():
+  def get_authors(payload):
     authors_data = Author.query.all()
 
     authors = [author.short() for author in authors_data]
@@ -54,7 +54,7 @@ def create_app(test_config=None):
 
   @app.route('/books', methods=['GET'])
   @requires_auth("get:books")
-  def get_books():
+  def get_books(payload):
     books_data = Book.query.all()
 
     books = [book.short() for book in books_data]
@@ -66,7 +66,7 @@ def create_app(test_config=None):
 
   @app.route('/books/author/<int:author_id>', methods=['GET'])
   @requires_auth("get:books_by_author")
-  def get_books_by_author(author_id):
+  def get_books_by_author(payload, author_id):
     author = Author.query.get(author_id)
 
     if author is None:
@@ -81,7 +81,7 @@ def create_app(test_config=None):
 
   @app.route('/authors/<int:author_id>', methods=['GET'])
   @requires_auth("get:authors_detail")
-  def get_author_detail(author_id):
+  def get_author_detail(payload, author_id):
     existed_author = Author.query.get(author_id)
 
     if existed_author is None:
@@ -94,7 +94,7 @@ def create_app(test_config=None):
 
   @app.route('/books/<int:book_id>', methods=['GET'])
   @requires_auth("get:books_detail")
-  def get_book_detail(book_id):
+  def get_book_detail(payload, book_id):
     existed_book = Book.query.get(book_id)
 
     if existed_book is None:
@@ -107,7 +107,7 @@ def create_app(test_config=None):
 
   @app.route('/authors', methods=['POST'])
   @requires_auth("post:authors")
-  def post_authors():
+  def post_authors(payload):
     body = request.get_json()
 
     name = body.get('name', "")
@@ -132,7 +132,7 @@ def create_app(test_config=None):
 
   @app.route('/books', methods=['POST'])
   @requires_auth("post:books")
-  def post_books():
+  def post_books(payload):
     body = request.get_json()
 
     title = body.get('title', "")
@@ -165,7 +165,7 @@ def create_app(test_config=None):
 
   @app.route('/books/<int:book_id>', methods=['PATCH'])
   @requires_auth("patch:books")
-  def edit_book(book_id):
+  def edit_book(payload, book_id):
     book = Book.query.get(book_id)
 
     if book is None:
@@ -214,7 +214,7 @@ def create_app(test_config=None):
 
   @app.route('/authors/<int:author_id>', methods=['PATCH'])
   @requires_auth("patch:authors")
-  def edit_author(author_id):
+  def edit_author(payload, author_id):
     author = Author.query.get(author_id)
 
     if author is None:
@@ -252,7 +252,7 @@ def create_app(test_config=None):
 
   @app.route('/authors/<int:author_id>', methods=['DELETE'])
   @requires_auth("delete:authors")
-  def delete_author(author_id):
+  def delete_author(payload, author_id):
     author = Author.query.get(author_id)
 
     if author is None:
@@ -270,7 +270,7 @@ def create_app(test_config=None):
 
   @app.route('/books/<int:book_id>', methods=['DELETE'])
   @requires_auth("delete:books")
-  def delete_book(book_id):
+  def delete_book(payload, book_id):
     book = Book.query.get(book_id)
 
     if book is None:
