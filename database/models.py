@@ -51,7 +51,7 @@ class Book(db.Model):
         return {
             'id': self.id,
             'title': self.title,
-            'author': self.author.name
+            'author': self.author.name if self.author else "Not have author"
         }
 
     def long(self):
@@ -60,7 +60,7 @@ class Book(db.Model):
             'title': self.title,
             'description': self.description,
             'release_date': self.release_date,
-            'author': self.author.name
+            'author': self.author.name if self.author else "Not have author"
         }
 
 

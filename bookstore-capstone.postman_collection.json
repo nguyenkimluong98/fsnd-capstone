@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "995e840b-003c-4615-aad6-266dc746c53d",
+		"name": "bookstore-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "1. Get all books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Get all authors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Get detail of book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Get detail of author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Get list books of author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/author/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"author",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Create a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test create book\",\n    \"description\": \"Test new book with description\",\n    \"release_date\": \"2022/10/08\",\n    \"author_id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7. Create an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Noname\",\n    \"full_name\": \"No name\",\n    \"dob\": \"1990/10/10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8. Edit a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Book title edited\",\n    \"description\": \"Description edited\",\n    \"release_date\": \"2000/01/01\",\n    \"author_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/12",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9. Edit an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name edited\",\n    \"full_name\": \"Fullname edited\",\n    \"dob\": \"1990/01/01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/9",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10. Delete a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/11",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11. Delete an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/10",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxMzY2ODQsImV4cCI6MTY2NjAwMDY4NCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBwb3N0OmJvb2tzIHBvc3Q6YXV0aG9ycyBwYXRjaDpib29rcyBwYXRjaDphdXRob3JzIGRlbGV0ZTpib29rcyBkZWxldGU6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJwb3N0OmJvb2tzIiwicG9zdDphdXRob3JzIiwicGF0Y2g6Ym9va3MiLCJwYXRjaDphdXRob3JzIiwiZGVsZXRlOmJvb2tzIiwiZGVsZXRlOmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.BKdQfoD_M3nDsMgiINm2Gp5T4Zzjxzo3ZnoKzXVJ8lBZXw3bGxQ9nBqMvsChDVtLtt3uH-ngp_cXNRjv6v1VZqKBi_WJTPPCbvroy3u74UJqEE1SbGA8LECDiYf1FPW_OLWcacLoJC1qdrTlNuT2JalgXytS5JIAtwp-0gj55dpon1w_H7mO_pjsGUGyXjV3anlb-wSO6aDr89cnpewWS5cW1Pj_MXZHnqZFfFill_D_k_MIquqHTQIsw66HemtK9lb5A1RzwJTTubPJlXfNLl9u7kYVBuHqYfvuIWZcvWUbw1yVG-SZtvB9L4pnRXDX0k7FI_7_dKD6uUf9e01XUg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Viewer",
+			"item": [
+				{
+					"name": "1. Get all books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Get all authors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Get detail of book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Get detail of author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Get list books of author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/author/1",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"author",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Create a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test create book\",\n    \"description\": \"Test new book with description\",\n    \"release_date\": \"2022/10/08\",\n    \"author_id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7. Create an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Noname\",\n    \"full_name\": \"No name\",\n    \"dob\": \"1990/10/10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8. Edit a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Book title edited\",\n    \"description\": \"Description edited\",\n    \"release_date\": \"2000/01/01\",\n    \"author_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/12",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9. Edit an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name edited\",\n    \"full_name\": \"Fullname edited\",\n    \"dob\": \"1990/01/01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/9",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10. Delete a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/books/11",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11. Delete an author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore-capstone.herokuapp.com/authors/10",
+							"protocol": "https",
+							"host": [
+								"bookstore-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"authors",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVBa3JHWGVOZWY4RXZxdEEwZUFFQiJ9.eyJpc3MiOiJodHRwczovL2Rldi1uN3gzYW83ei51cy5hdXRoMC5jb20vIiwic3ViIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmpAY2xpZW50cyIsImF1ZCI6ImNhcHN0b25lLWx1b25nbmsiLCJpYXQiOjE2NjUxOTI4MDQsImV4cCI6MTY2NjA1NjgwNCwiYXpwIjoiVUwxRm5mS1FIUlZINFN1dnZ0ZmhMS1dpcXdPY29TdmoiLCJzY29wZSI6ImdldDpib29rcyBnZXQ6YXV0aG9ycyBnZXQ6Ym9va3NfYnlfYXV0aG9yIGdldDpib29rc19kZXRhaWwgZ2V0OmF1dGhvcnNfZGV0YWlsIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsiZ2V0OmJvb2tzIiwiZ2V0OmF1dGhvcnMiLCJnZXQ6Ym9va3NfYnlfYXV0aG9yIiwiZ2V0OmJvb2tzX2RldGFpbCIsImdldDphdXRob3JzX2RldGFpbCJdfQ.EVLe3OCW4yUsimJ_8ZgvoR00AbDatXCRJSwHJa0qgmHK7WJUY9Oaiw2ICQz5JD19q8MHqGfQRZW26_o47iRMkF3pj797DFOfZSZC-i7_By693A-aVaNIgnSZRabApGgFw2Pr4PQeWDyLIpDu8kUBztGoiTOiOMbLm18juykiHQgtrTYsPLpqYsmKcFNybTwx6VIT-GyUDUmx1jeCgp5b1Ma65ATC61Qv0OIDNRw6MeFLscrhe2XRzkP-KOHRhwQNeJuV6_GHibdFXowQ8MDMDtTwPevcTViGS4xSZlNlE05YAjgtCh6Ee3E-6iFXDlptKUJhdOmVpi2ZlFCDg6Gb8g",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
