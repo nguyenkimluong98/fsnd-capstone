@@ -1,1 +1,6 @@
 psql -h bookstore.c4bq3uuqrub9.us-east-1.rds.amazonaws.com -U postgres bookstore < bookstore.psql
+
+curl --request POST \
+  --url https://dev-n7x3ao7z.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"UL1FnfKQHRVH4SuvvtfhLKWiqwOcoSvj","client_secret":"iLLD5Mqz64JJgc3W3NyRA_M1-EW1wFmdP3Z0QwdO6QKWItYQM7sF1Zb9mD5xgJtO","audience":"capstone-luongnk","grant_type":"client_credentials"}'
